@@ -95,3 +95,4 @@ void loop() {
 
   delay(1000); // ThingSpeak minimum update interval
 }
+
