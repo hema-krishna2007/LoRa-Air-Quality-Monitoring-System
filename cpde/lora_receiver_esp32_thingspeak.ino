@@ -13,7 +13,7 @@ const char* ssid = "wifi name";
 const char* password = "password";
 
 // ---------- ThingSpeak ----------
-String apiKey = "BIYASNH4JHE6N4FH";
+String apiKey = "api_key";
 String server = "http://api.thingspeak.com/update";
 
 void setup() {
@@ -95,5 +95,6 @@ void loop() {
 
   delay(1000); // ThingSpeak minimum update interval
 }
+
 
 
