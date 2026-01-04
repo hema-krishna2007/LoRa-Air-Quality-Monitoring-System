@@ -169,7 +169,9 @@ This project strengthened our understanding of:
 3. Go to **File → Preferences**
 4. (For ESP32) Add the following URL in **Additional Board Manager URLs**:
 
-https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json5. Go to **Tools → Board → Boards Manager**
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+
+5. Go to **Tools → Board → Boards Manager**
 6. Install the following boards:
 - **Arduino AVR Boards** (for Crowdunio / Arduino UNO)
 - **ESP32 by Espressif Systems**
