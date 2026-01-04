@@ -160,6 +160,92 @@ This project strengthened our understanding of:
 - Cloud-based data visualization  
 
 ---
+## 🔧 Installation Instructions
+
+### 1️⃣ Arduino IDE Setup
+1. Download and install **Arduino IDE** from:  
+   https://www.arduino.cc/en/software
+2. Open Arduino IDE  
+3. Go to **File → Preferences**
+4. (For ESP32) Add the following URL in **Additional Board Manager URLs**:
+
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json5. Go to **Tools → Board → Boards Manager**
+6. Install the following boards:
+- **Arduino AVR Boards** (for Crowdunio / Arduino UNO)
+- **ESP32 by Espressif Systems**
+
+---
+
+### 2️⃣ Required Libraries
+Install the following libraries via  
+**Sketch → Include Library → Manage Libraries**
+
+- DHT sensor library – by Adafruit  
+- Adafruit Unified Sensor  
+- Adafruit PM25 AQI  
+- LoRa – by Sandeep Mistry *(or E22 library if used)*  
+- ThingSpeak  
+- WiFi *(default for ESP32)*  
+
+---
+
+### 3️⃣ Uploading the Code
+
+#### Transmitter Node (Crowdunio UNO)
+1. Connect the **transmitter board** to the PC  
+2. Select the correct **Board** and **COM Port**  
+3. Upload `transmitter_lora_uno.ino`  
+4. Disconnect the transmitter  
+
+#### Receiver Node (ESP32-D)
+1. Connect the **ESP32 receiver** to the PC  
+2. Select **ESP32 Dev Module**  
+3. Enter Wi-Fi credentials and ThingSpeak API Key in the code  
+4. Upload `receiver_lora_esp32.ino`  
+5. Power both transmitter and receiver nodes  
+
+---
+
+## 🔌 Wiring Connections
+
+### 📍 Transmitter Side (Crowdunio UNO + Sensors + LoRa)
+
+| Component        | Arduino UNO Pin |
+|------------------|-----------------|
+| DHT11 vcc ,gnd   | 5v ,gnd         |
+| DHT11 DATA       | D3              |
+| PMS5003 VCC,GND  | 5V,GND          |
+| PMS5003          | D4              |
+| LoRa NSS (CS)    | D10             |
+| LoRa MOSI        | D11             |
+| LoRa MISO        | D12             |
+| LoRa SCK         | D13             |
+| LoRa RST         | D9              |
+| LoRa DIO0        | D2              |
+
+⚠️ *Pin numbers may vary depending on the module and code configuration.*
+
+---
+
+### 📍 Receiver Side (LoRa ThingBot v1.1 → ESP32-D)
+
+| LoRa Pin | ESP32-D Pin | Description |
+|---------|-------------|-------------|
+| VCC     | 3.3V        | Power supply (**Do NOT use 5V**) |
+| GND     | GND         | Ground |
+| SCK     | GPIO18      | SPI Clock |
+| MISO    | GPIO19      | SPI MISO |
+| MOSI    | GPIO23      | SPI MOSI |
+| NSS / CS| GPIO5       | Chip Select |
+| RST     | GPIO14      | Reset |
+| DIO0    | GPIO2       | Interrupt (RX/TX Done) |
+
+```markdown
+⚠️ Important Notes:
+- Power the LoRa ThingBot v1.1 using **3.3V only**
+- Supplying 5V may permanently damage the LoRa module
+- SPI pins must match the configuration used in the receiver code
+
 
 ## 🤝 Feedback
 
