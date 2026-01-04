@@ -246,7 +246,22 @@ Install the following libraries via
 ⚠️ Important Notes:
 - Power the LoRa ThingBot v1.1 using **3.3V only**
 - Supplying 5V may permanently damage the LoRa module
-- SPI pins must match the configuration used in the receiver code
+- SPI pins must match the configuration used in the receiver code.
+
+## 🛠 Troubleshooting
+
+- **No data on ThingSpeak**
+  - Check Wi-Fi credentials and API key
+  - Ensure ESP32 is connected to the internet
+
+- **LoRa not receiving data**
+  - Verify SPI pin mapping
+  - Ensure both nodes use the same frequency and spreading factor
+
+- **PM sensor not responding**
+  - Check UART connections
+  - Ensure proper power supply
+
 
 
 ## 🤝 Feedback
