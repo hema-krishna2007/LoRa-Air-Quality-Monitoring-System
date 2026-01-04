@@ -9,8 +9,8 @@
 #define DIO0 2
 
 // ---------- WiFi Details ----------
-const char* ssid = "Bindu";
-const char* password = "cheng@123";
+const char* ssid = "wifi name";
+const char* password = "password";
 
 // ---------- ThingSpeak ----------
 String apiKey = "BIYASNH4JHE6N4FH";
@@ -95,4 +95,5 @@ void loop() {
 
   delay(1000); // ThingSpeak minimum update interval
 }
+
 
