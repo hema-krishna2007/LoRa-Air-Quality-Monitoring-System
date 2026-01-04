@@ -108,18 +108,18 @@ LoRa-Air-Quality-Monitoring-System
 
 ├── images
 
-│ ├── block_diagram.png
+      │ ├── block_diagram.png
 
-│ ├── complete_setup.jpg
+      │ ├── complete_setup.jpg
 
-│ └── mobile_thingspeak_dashboard.png
+      │ └── mobile_thingspeak_dashboard.png
 │
 
 └── code
 
-   ├── transmitter_lora_uno.ino
+     ├── transmitter_lora_uno.ino
    
-   └── receiver_lora_esp32.ino
+     └── receiver_lora_esp32.ino
 
 
 
