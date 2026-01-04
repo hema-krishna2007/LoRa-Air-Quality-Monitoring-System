@@ -25,18 +25,31 @@ The system collects environmental and air quality parameters at a remote locatio
 
 ## 🔁 System Architecture Flow
 Sensors
+
 ↓
+
 Crowdunio UNO
+
 ↓
+
 LoRa Transmitter
+
 ↓
+
 LoRa Receiver
+
 ↓
+
 ESP32 (Wi-Fi)
+
 ↓
+
 ThingSpeak Cloud
+
 ↓
+
 Mobile / Web Visualization
+
 
 ---
 
@@ -101,6 +114,7 @@ LoRa-Air-Quality-Monitoring-System
 
 │ └── mobile_thingspeak_dashboard.png
 │
+
 └── code
 
    ├── transmitter_lora_uno.ino
