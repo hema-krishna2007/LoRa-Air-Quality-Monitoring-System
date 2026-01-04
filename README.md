@@ -130,11 +130,11 @@ LoRa-Air-Quality-Monitoring-System
 ## 📄 Source Code
 
 - **Transmitter Code**  
-  `code/transmitter_lora_uno.ino`  
+  `code/lora_transmitter_dht_aqi.ino`  
   (Crowdunio UNO + LoRa + DHT11 + PM25AQI)
 
 - **Receiver Code**  
-  `code/receiver_lora_esp32.ino`  
+  `code/lora_receiver_esp32_thingspeak.ino`  
   (LoRa Receiver + ESP32 + ThingSpeak)
 
 ---
